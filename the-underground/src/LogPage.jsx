@@ -42,6 +42,7 @@ function LogPage({showLog, setShowLog, setCurrentUser}){
 
     return(
         <div className="log-page" >
+          <h1>Log In</h1>
         <div className="close-icon"  onClick={handleClick} >🅧</div>
         <form onSubmit={handleLogin} >
         <input 

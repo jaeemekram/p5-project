@@ -166,6 +166,7 @@ nav .nav-button:disabled {
 .dashboard{
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden; 
 
 }
 
@@ -177,7 +178,8 @@ nav .nav-button:disabled {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #FFC107,#E1E8EB)
+    background: linear-gradient(to bottom, #FFC107,#E1E8EB);
+    overflow-x: hidden; 
 }
 
 .swipe {
@@ -210,7 +212,8 @@ nav .nav-button:disabled {
   
   .card h3 {
     margin-top: 0;
-    color: #7952B3 ;
+    color: #FFC107 ;
+    font-size: 1.5em;
   }
 
   .dashboard .swipe-info {
@@ -284,3 +287,120 @@ nav .nav-button:disabled {
     display: flex;
     flex-direction: column;
 }
+
+/* --- Instructions Page --- */
+.instructions-page{
+    background-color: #fff;
+    width: 350px;
+    height: 600px;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+/*-------- Profile Page --------*/
+.profile-nav {
+    background: linear-gradient(to bottom, #E1E8EB,#FFC107);
+}
+
+.profile-nav button {
+    color: #E8E2E2;
+    background-color: black;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+
+.profile-page {
+    /* display: flex;
+    border-top: solid 1px rgb(213, 213, 213);
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #FFC107,#E1E8EB); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #FFC107,#E1E8EB);
+    overflow-x: hidden; 
+   
+
+}
+
+.profile-page form {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pageform section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+    text-align: start;
+}
+
+.profile-page form input {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px rgb(219, 219, 219);
+    border-radius: 10px;
+}
+
+.profile-page form label {
+    margin: 10px 0;
+}
+
+.profile-page form .multiple-input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-page form input::-webkit-outer-spin-button,
+.profile-page form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.profile-page form .multiple-input-container input {
+    margin-right: 10px;
+}
+
+.profile-page form .multiple-input-container label {
+    padding: 12px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+    margin-left: 150px;
+    
+}
+
+.profile-page form input[type=radio] {
+    display: none;
+}
+
+.profile-page form input[type=number] {
+    width: 10%;
+}
+
+.profile-page form input[type=radio]:checked + label {
+    border: solid 2px rgb(221, 39, 22);
+}
+
+.profile-page form input[type=submit]:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.profile-page form input[type=submit]:active {
+    background-color: rgb(226, 115, 115);
+}
+
+.profile-page form .photo-container img {
+    width: 100%;
+}
+

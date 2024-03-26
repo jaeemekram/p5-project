@@ -7,6 +7,7 @@ import AuthPage from './AuthPage'
 import LogPage from './LogPage'
 import { useEffect } from 'react'
 import MatchesDisplay from './MatchesDisplay'
+import ProfilePage from './ProfilePage'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/authpage" element={<AuthPage setCurrentUser={setCurrentUser} />} />
         <Route path="/logpage" element={<LogPage />} />
         <Route path="/matches-display" element={<MatchesDisplay />} />
+        <Route path="/profile-page" element={<ProfilePage currentUser={currentUser} />} />
       </Routes>
     </BrowserRouter>
   )

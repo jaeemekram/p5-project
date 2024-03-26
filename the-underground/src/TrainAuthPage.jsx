@@ -80,7 +80,7 @@ function TrainAuthPage({setShowTrainAuth, setCurrentUser}){
     return (
         <div className="train-auth-page" >
             <div className="train-close-icon"  onClick={handleClick} >🅧</div>
-            <h2>{isSignUp ? 'CREATE ACCOUNT' : 'LOG IN'}</h2>
+            <h2>{isSignUp ? 'CREATE TRAINER ACCOUNT' : 'LOG IN'}</h2>
             <form onSubmit={handleRegister} >
             <input 
                 type="text"

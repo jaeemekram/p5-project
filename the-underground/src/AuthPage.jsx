@@ -68,7 +68,7 @@ function AuthPage({setShowAuth, setCurrentUser }){
     return (
         <div className="auth-page" >
             <div className="close-icon"  onClick={handleClick} >🅧</div>
-            <h2>{isSignUp ? 'CREATE ACCOUNT' : 'LOG IN'}</h2>
+            <h2>{isSignUp ? 'CREATE CLIENT ACCOUNT' : 'LOG IN'}</h2>
             <form onSubmit={handleRegister} >
             <input 
                 type="text"

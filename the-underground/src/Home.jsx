@@ -22,6 +22,7 @@ function Home({ currentUser, setCurrentUser}){
     const handleTrainClick = () => {
         setShowTrainAuth(true)
     }
+    
 
 
     return (

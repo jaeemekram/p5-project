@@ -1,11 +1,13 @@
 import TinderCard from 'react-tinder-card'
 import { useState } from 'react'
 import ChatContainer from './ChatContainer'
+import Instructions from './Instructions'
 
 function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser}){
 
   const [lastDirection, setLastDirection] = useState()
   const [trainerId, setTrainerId] = useState('')
+  const[showInstructions, setShowInstructions] = useState(false)
 
   async function updateMatches(trainerId) {
     const new_match = {client_id: currentUser.id, trainerId}
@@ -62,11 +64,13 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
 
     return (
       <div className="dashboard">
-        <ChatContainer matches={matches} currentUser={currentUser} setCurrentUser={setCurrentUser} />
+        <ChatContainer matches={matches} currentUser={currentUser} setCurrentUser={setCurrentUser} showInstructions={showInstructions} setShowInstructions={setShowInstructions} />
         <div className="swipe-container">
           <div className="card-container">
 
-            {shuffledTrainers.map((trainer) => (
+            {showInstructions==true ? <Instructions setShowInstructions={setShowInstructions} /> : null}
+
+            { showInstructions == false ? shuffledTrainers.map((trainer) => (
               <TinderCard
                 className="swipe"
                 key={trainer.username}
@@ -78,9 +82,11 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
                   className="card"
                 >
                   <h3>{trainer.first_name}</h3>
+                  <h3>{trainer.username}</h3>
+                  <h3>Specialty: {trainer.trainer_specialties[0].specialty.specialty}</h3>
                 </div>
               </TinderCard>
-            ))}
+            )): null} 
 
             <div className='swipe-info' >
               {lastDirection ? <p>You  swiped {lastDirection}</p> : <p></p>}
@@ -94,25 +100,3 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
 export default Dashboard;
 
 
-// const trainers = [
-  //   {
-  //     name: 'Richard Hendricks',
-  //     url: 'https://pics.craiyon.com/2023-10-18/68713ca622b64f2d8c0f875543db05ce.webp'
-  //   },
-  //   {
-  //     name: 'Erlich Bachman',
-  //     url: 'https://pics.craiyon.com/2023-10-18/68713ca622b64f2d8c0f875543db05ce.webp'
-  //   },
-  //   {
-  //     name: 'Monica Hall',
-  //     url: 'https://pics.craiyon.com/2023-10-18/68713ca622b64f2d8c0f875543db05ce.webp'
-  //   },
-  //   {
-  //     name: 'Jared Dunn',
-  //     url: 'https://pics.craiyon.com/2023-10-18/68713ca622b64f2d8c0f875543db05ce.webp'
-  //   },
-  //   {
-  //     name: 'Dinesh Chugtai',
-  //     url: 'https://pics.craiyon.com/2023-10-18/68713ca622b64f2d8c0f875543db05ce.webp'
-  //   }
-  // ]

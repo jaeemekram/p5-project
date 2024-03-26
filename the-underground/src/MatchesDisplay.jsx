@@ -8,6 +8,10 @@ function MatchesDisplay({matches, currentUser}){
     const handleClick = () => {
         console.log(matches[0].trainer)
     }
+
+    const showInfo = () => {
+      
+    }
     
     return (
       <div className="matches-display">
@@ -18,7 +22,7 @@ function MatchesDisplay({matches, currentUser}){
             onClick={handleClick}
           >
             <div className="img-container">
-              <img src={match.trainer.img1} alt={match.trainer.first_name + " profile"} />
+              <img src={match.trainer.img1} alt={match.trainer.first_name + " profile"} onClick={showInfo} />
             </div>
             <h3>{match.trainer.first_name}</h3>
           </div>
