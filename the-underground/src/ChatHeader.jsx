@@ -25,11 +25,11 @@ function ChatHeader({ currentUser ,setCurrentUser, showInstructions, setShowInst
                 <div className="img-container" >
                     <img src="" />
                 </div>
-                <h3> {currentUser.username}</h3>
-            </div>
-            <i className="log-out-icon" onClick={handleProfile} >🍆 Profile </i>
+                <h3>{currentUser.username}</h3>
+            </div >
+            <i className="log-out-icon" onClick={handleProfile} >👤 Profile </i>
             <i className="log-out-icon" onClick={handleInstructs} >📝 Instructions </i>
-            <i className="log-out-icon" onClick={handleClick} >⬅ Logout</i>
+            <i className="log-out-icon" onClick={handleClick} >🚫 Logout</i>
         </div>
     )
 }

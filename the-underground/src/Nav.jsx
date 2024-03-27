@@ -13,7 +13,7 @@ function handleLogOut() {
         <nav>
             <div className= "logo-container" > 
                 <img className= "logo"  />
-                <h2 className="nav-title">🚧THE UNDERGROUND🚧</h2>
+                <h1 className="nav-title">🚧THE UNDERGROUND🚧</h1>
             </div>
 
             {!currentUser.id ? <p></p> : <p>Welcome {currentUser.username} </p>}

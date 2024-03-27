@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html, body {
     margin: 0;
@@ -6,7 +7,10 @@ html, body {
 }
 
 * {
-    font-family: 'Madimi One', sans-serif;
+    /* font-family: 'Madimi One', sans-serif; */
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .primary-button {
@@ -53,19 +57,25 @@ nav {
 }
 
 .nav-button {
-    color: #E8E2E2;
-    background-color: black;
+    color: #E1E8EB;
+    background-color: #343A40;
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
     border: none;
-    margin: 10px;
+    margin: 5px;
+    height: 3em;
+    margin-top: 1em;
 
 }
 
 nav .nav-button:disabled {
     background-color: #343A40;
     color: #E1E8EB
+}
+
+nav .logo-container h1 {
+    font-size: 30px;
 }
 
 
@@ -76,7 +86,20 @@ nav .nav-button:disabled {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: linear-gradient(to bottom, #FFC107,#E1E8EB)
+    background: linear-gradient(to bottom, #FFC107,#E1E8EB);
+    background-image: url('https://cdn1.epicgames.com/ue/product/Screenshot/3-1920x1080-1f3fb5d9f1103d90deb3fe359e9f9e0b-1920x1080-1f3fb5d9f1103d90deb3fe359e9f9e0b.jpg?resize=1&w=1920');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #E1E8EB;
+}
+
+.home {
+    top: 25%; 
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%,0) ;
 }
 
 
@@ -85,16 +108,19 @@ nav .nav-button:disabled {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 210px; 
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 500px;
     height: 400px; 
-    background-color: #fff;
+    background-color: #E1E8EB;
     border-radius: 10px;
     padding: 100px;
     overflow: scroll; 
-}
+
+    top: 25%; 
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%,0) ;
+    color:#343A40}
 
 
 .auth-page .close-icon {
@@ -118,15 +144,19 @@ nav .nav-button:disabled {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 210px; 
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 500px;
     height: 400px; 
-    background-color: #fff;
+    background-color: #E1E8EB;
     border-radius: 10px;
     padding: 100px;
     overflow: scroll; 
+
+    top: 25%; 
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%,0);
+    color:#343A40;
 }
 
 .train-auth-page .train-close-icon {
@@ -151,18 +181,24 @@ nav .nav-button:disabled {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 210px; 
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 500px;
     height: 400px; 
-    background-color: #fff;
+    background-color: #E1E8EB;
     border-radius: 10px;
     padding: 100px;
     overflow: scroll; 
+
+    top: 25%; 
+    position: absolute;
+    transform: translate(0, -50%);
+    left: 50%;
+    transform: translate(-50%,0) ;
+    color:#343A40
 }
 
 /* --- DASHBOARD --- */
+
+
 .dashboard{
     display: flex;
     justify-content: space-between;
@@ -179,6 +215,10 @@ nav .nav-button:disabled {
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom, #FFC107,#E1E8EB);
+    background-image: url('https://images.unsplash.com/photo-1527049979667-990f1d0d8e7f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjByb2NrfGVufDB8fDB8fHww');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden; 
 }
 
@@ -212,8 +252,10 @@ nav .nav-button:disabled {
   
   .card h3 {
     margin-top: 0;
-    color: #FFC107 ;
+    color: #E1E8EB ;
     font-size: 1.5em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
   }
 
   .dashboard .swipe-info {
@@ -222,18 +264,38 @@ nav .nav-button:disabled {
     padding: 50px;
   }
 
+  .click-left {
+    position:relative;
+    right: 310px; 
+    top: 350px;
+    font-size: 40px;
+}
+  
+.click-right {
+    position: relative;
+    left: 370px; 
+    bottom: 310px;
+    font-size: 40px;
+}
+
   /*-------- Chat Container --------*/
 .chat-container {
-    background-color: rgb(255, 255, 255);
+    /* background-color: #343A40; */
+    /* background-image: url('https://i.pinimg.com/474x/28/e7/ce/28e7cee8096f263938261641038f1fd1.jpg'); */
+    background: linear-gradient(250deg, #1a1a1a, #464e55);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     width: 30%;
     text-align: left;
     z-index: 1;
+    color: #E1E8EB;
 }
 
 .chat-container .chat-container-header {
-    background: linear-gradient(45deg, #7952B3, #343A40);
+    background: linear-gradient(250deg, #2c174b, #303030);
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -242,8 +304,8 @@ nav .nav-button:disabled {
 
 .chat-container .option {
     border: none;
-    background-color: rgb(255, 255, 255);
-    border-bottom: solid 4px #7952B3;
+    background-color: #E1E8EB ;
+    border-bottom: solid 4px #FFC107;
     font-size: 20px;
     margin: 2px;
     padding: 10px;
@@ -257,9 +319,11 @@ nav .nav-button:disabled {
 .chat-container .log-out-icon {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     color: rgb(255, 255, 255);
+
 }
+
 
 .img-container {
     height: 30px;
@@ -271,6 +335,21 @@ nav .nav-button:disabled {
 
 .img-container img {
     width: 100%;
+}
+
+.info-modal {
+    position: absolute;
+    /* margin-left:10%; */
+    top: 210px; 
+    left: 10%;
+    /* transform: translateX(-50%); */
+    max-width: 500px;
+    height: 400px; 
+    background-color: #E1E8EB;
+    border-radius: 10px;
+    padding: 100px;
+    overflow: scroll; 
+
 }
 
 /*-------- Chat Display --------*/
@@ -301,11 +380,12 @@ nav .nav-button:disabled {
 
 /*-------- Profile Page --------*/
 .profile-nav {
-    background: linear-gradient(to bottom, #E1E8EB,#FFC107);
+    background: linear-gradient(to bottom, #2c174b,#464e55);
+    color: #FFC107;
 }
 
 .profile-nav button {
-    color: #E8E2E2;
+    color: #FFC107;
     background-color: black;
     font-size: 20px;
     padding: 10px;
@@ -315,18 +395,15 @@ nav .nav-button:disabled {
 }
 
 .profile-page {
-    /* display: flex;
-    border-top: solid 1px rgb(213, 213, 213);
-    margin-top: 50px;
-    background: linear-gradient(to bottom, #FFC107,#E1E8EB); */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #FFC107,#E1E8EB);
+    background: linear-gradient(to bottom,#464e55 ,#1a1a1a);
     overflow-x: hidden; 
+    color: #E1E8EB;
    
 
 }

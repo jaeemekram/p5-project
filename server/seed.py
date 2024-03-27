@@ -1,5 +1,7 @@
 from random import randint, choice as rc 
 
+
+
 # Remote library imports
 from faker import Faker
 # f = open('db.json')
@@ -11,6 +13,8 @@ from app import app
 from models import db, Client, Trainer, Match, Message, Specialty, TrainerSpecialty
 
 fake = Faker()
+
+
 
 
 
@@ -38,8 +42,10 @@ if __name__ == '__main__':
         db.session.commit()
         print("making Clients beep boop...")
 
+        image = "/Users/jaeemthedream/Desktop/lecture codes/p5-project/the-underground/public/IMG_0646.jpg"
+
         ###TRAINER INSTANCES
-        t1=Trainer(username="JaeemTheDream", password=fake.password(), first_name="Jaeem", last_name="Ekram", email=fake.email(), dob_month=randint(1,13), dob_day=randint(1,31), dob_year=randint(1972,2011), gender="Male", weight=randint(100,201), img1="https://resource.destinywalkthrough.com/library/2014/1410174811hunter_single_3.png",img2="", img3="", about="", is_certified="cert-pic " , city=rc([city for city in cities]))
+        t1=Trainer(username="JaeemTheDream", password=fake.password(), first_name="Jaeem", last_name="Ekram", email=fake.email(), dob_month=randint(1,13), dob_day=randint(1,31), dob_year=randint(1972,2011), gender="Male", weight=randint(100,201), img1="https://i.ibb.co/Tb2C14j/IMG-0646.jpg" ,img2="", img3="", about="", is_certified="cert-pic " , city=rc([city for city in cities]))
         t2=Trainer(username="HeresJohnny", password=fake.password(), first_name="Johnny", last_name="Bravo", email=fake.email(), dob_month=randint(1,13), dob_day=randint(1,31), dob_year=randint(1972,2011), gender="Male", weight=randint(100,201), img1="https://1.bp.blogspot.com/-xnWU73LIBu4/YVBmXTiR5VI/AAAAAAAAnVg/6hgKibonMjo0sts-8HbKeyOGU05cbsZ-wCLcBGAsYHQ/s720/3378021.jpg",img2="", img3="", about="", is_certified="cert-pic " , city=rc([city for city in cities]))
         t3=Trainer(username="PoppaPops", password=fake.password(), first_name="Popeye", last_name="TheSailor", email=fake.email(), dob_month=randint(1,13), dob_day=randint(1,31), dob_year=randint(1972,2011), gender="Male", weight=randint(100,201), img1="https://i.pinimg.com/originals/05/c1/ab/05c1ab65b1b2e336fe3cb321b9d4ea46.png",img2="", img3="", about="", is_certified="cert-pic " , city=rc([city for city in cities]))
         t4=Trainer(username="FlexNoBox", password=fake.password(), first_name="Helen", last_name="Parr", email=fake.email(), dob_month=randint(1,13), dob_day=randint(1,31), dob_year=randint(1972,2011), gender="Female", weight=randint(100,201), img1="https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/Helen_Parr.png/220px-Helen_Parr.png",img2="", img3="", about="", is_certified="cert-pic ", city=rc([city for city in cities]) )

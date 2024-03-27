@@ -38,37 +38,38 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
     console.log(name + ' left the screen!')
   }
 
-  console.log(trainers)
-
   function shuffle(trainers) {
     let currentIndex = trainers.length,  randomIndex;
-  
-    // While there remain elements to shuffle.
-    while (currentIndex > 0) {
-  
-      // Pick a remaining element.
+    while (currentIndex > 0) {  
       randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
+      currentIndex--; 
       [trainers[currentIndex], trainers[randomIndex]] = [
         trainers[randomIndex], trainers[currentIndex]];
     }
-  
     return trainers;
   }
-
+  
   const shuffledTrainers = shuffle(trainers)
+  
+  const goLeft = () => {
+    console.log('left')
+  }
 
-  console.log(shuffledTrainers)
+  const goRight = () => {
+    console.log('right')
+  }
+
 
     return (
       <div className="dashboard">
         <ChatContainer matches={matches} currentUser={currentUser} setCurrentUser={setCurrentUser} showInstructions={showInstructions} setShowInstructions={setShowInstructions} />
         <div className="swipe-container">
+          
           <div className="card-container">
 
             {showInstructions==true ? <Instructions setShowInstructions={setShowInstructions} /> : null}
+
+            <div className='click-left' onClick= {goLeft} >←</div>
 
             { showInstructions == false ? shuffledTrainers.map((trainer) => (
               <TinderCard
@@ -82,8 +83,8 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
                   className="card"
                 >
                   <h3>{trainer.first_name}</h3>
-                  <h3>{trainer.username}</h3>
-                  <h3>Specialty: {trainer.trainer_specialties[0].specialty.specialty}</h3>
+                  <h3>Username:  {trainer.username}</h3>
+                  <h3>Specialty:  {trainer.trainer_specialties[0].specialty.specialty}</h3>
                 </div>
               </TinderCard>
             )): null} 
@@ -92,6 +93,7 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
               {lastDirection ? <p>You  swiped {lastDirection}</p> : <p></p>}
             </div>
           </div>
+          <div className='click-right' onClick={goRight} >→</div>
         </div>
       </div>
     );
