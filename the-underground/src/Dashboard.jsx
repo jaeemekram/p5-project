@@ -69,7 +69,7 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
 
             {showInstructions==true ? <Instructions setShowInstructions={setShowInstructions} /> : null}
 
-            <div className='click-left' onClick= {goLeft} >←</div>
+            {/* <div className='click-left' onClick= {goLeft} >←</div> */}
 
             { showInstructions == false ? shuffledTrainers.map((trainer) => (
               <TinderCard
@@ -93,7 +93,7 @@ function Dashboard({currentUser, trainers, matches, setMatches, setCurrentUser})
               {lastDirection ? <p>You  swiped {lastDirection}</p> : <p></p>}
             </div>
           </div>
-          <div className='click-right' onClick={goRight} >→</div>
+          {/* <div className='click-right' onClick={goRight} >→</div> */}
         </div>
       </div>
     );

@@ -56,6 +56,12 @@ nav {
 
 }
 
+nav h1 {
+    color:#FFC107;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
 .nav-button {
     color: #E1E8EB;
     background-color: #343A40;
@@ -70,7 +76,7 @@ nav {
 }
 
 nav .nav-button:disabled {
-    background-color: #343A40;
+    background-color: #1f2428;
     color: #E1E8EB
 }
 
@@ -100,6 +106,23 @@ nav .logo-container h1 {
     transform: translate(0, -50%);
     left: 50%;
     transform: translate(-50%,0) ;
+    font-size: larger;
+
+}
+
+.home h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.home h2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.home h3 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 
@@ -304,11 +327,12 @@ nav .logo-container h1 {
 
 .chat-container .option {
     border: none;
-    background-color: #E1E8EB ;
+    background-color: #7b7e81 ;
     border-bottom: solid 4px #FFC107;
     font-size: 20px;
     margin: 2px;
     padding: 10px;
+    color: #E1E8EB;
 }
 
 .chat-container .option:disabled {
@@ -339,11 +363,11 @@ nav .logo-container h1 {
 
 .info-modal {
     position: absolute;
-    /* margin-left:10%; */
+    margin-left:10%;
     top: 210px; 
     left: 10%;
-    /* transform: translateX(-50%); */
-    max-width: 500px;
+    transform: translateX(-50%);
+    max-width: 10px;
     height: 400px; 
     background-color: #E1E8EB;
     border-radius: 10px;
@@ -378,6 +402,12 @@ nav .logo-container h1 {
     background-position: center;
 }
 
+/* --- Info Modal --- */
+.info-modal{
+    color:#464e55;
+    max-height: 200px;
+}
+
 /*-------- Profile Page --------*/
 .profile-nav {
     background: linear-gradient(to bottom, #2c174b,#464e55);
@@ -404,9 +434,13 @@ nav .logo-container h1 {
     background: linear-gradient(to bottom,#464e55 ,#1a1a1a);
     overflow-x: hidden; 
     color: #E1E8EB;
-   
-
 }
+
+.profile-page label {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
 
 .profile-page form {
     display: flex;

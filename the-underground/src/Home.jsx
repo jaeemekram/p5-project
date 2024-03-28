@@ -30,8 +30,8 @@ function Home({ currentUser, setCurrentUser}){
         <div className="overlay">
             <Nav  showAuth={showAuth} currentUser={currentUser} setShowLog={setShowLog} setCurrentUser={setCurrentUser} ></Nav>
             <div className="home">
-                <h1>The new home for Gym Rats🐀</h1>
-                <h3>It's time to swipe for gainz💪🏽, not dates💔</h3>
+                <h1>The new home for Gym Rats 🐁</h1>
+                <h3>It's time to swipe for gainz 💪🏽, not dates 💔</h3>
                 <h2>⬇ - GET STARTED - ⬇</h2>
                 
                 <div> <button className="primary-button" onClick={handleClick}>Sign up as Client</button> <button className="primary-button" onClick={handleTrainClick}>Sign up as Trainer</button>  </div>
